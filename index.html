@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoonMed Health & Wellness | Attridgeville</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), 
+                        url('assets/header.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    /* Make logo more visible */
+    .logo-img {
+      height: 70px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    }
+
+    @media (max-width: 768px) {
+      .logo-img {
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.jpg" 
+               alt="MoonMed Logo" 
+               class="logo-img">
+          
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 text-gray-700 font-medium">
+          <a href="#" class="hover:text-emerald-600 transition">Home</a>
+          <a href="#services" class="hover:text-emerald-600 transition">Services</a>
+          <a href="#doctors" class="hover:text-emerald-600 transition">Our Doctors</a>
+          <a href="#hours" class="hover:text-emerald-600 transition">Hours</a>
+          <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="tel:0672500506" class="text-emerald-700 font-semibold hover:text-emerald-800 flex items-center gap-2">
+            <i class="fas fa-phone"></i> 067 250 0506
+          </a>
+          <a href="https://wa.me/27649851938" target="_blank"
+             class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full flex items-center gap-2 transition">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="hamburger" class="md:hidden text-3xl text-emerald-700 p-2">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden mt-4 py-4 border-t">
+        <div class="flex flex-col gap-4 text-gray-700 font-medium">
+          <a href="#" class="hover:text-emerald-600 transition py-3">Home</a>
+          <a href="#services" class="hover:text-emerald-600 transition py-3">Services</a>
+          <a href="#doctors" class="hover:text-emerald-600 transition py-3">Our Doctors</a>
+          <a href="#hours" class="hover:text-emerald-600 transition py-3">Hours</a>
+          <a href="#contact" class="hover:text-emerald-600 transition py-3">Contact</a>
+          
+          <div class="pt-4 border-t space-y-3">
+            <a href="tel:0672500506" class="block py-3 text-emerald-700 font-semibold">
+              📞 067 250 0506
+            </a>
+            <a href="https://wa.me/27649851938" target="_blank"
+               class="block bg-emerald-600 text-white text-center py-4 rounded-2xl font-semibold text-lg">
+              💬 WhatsApp Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-bg h-screen flex items-center text-white">
+    <div class="max-w-7xl mx-auto px-5 md:px-6 text-center">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
+        Quality Healthcare<br><span class="text-emerald-300">Close to Home</span>
+      </h1>
+      <p class="text-lg md:text-2xl mb-10 max-w-2xl mx-auto">Compassionate Care in Attridgeville</p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
+                class="bg-emerald-600 hover:bg-emerald-700 px-8 md:px-10 py-5 rounded-2xl text-lg font-semibold transition">
+          Book Appointment
+        </button>
+        <button onclick="window.location.href='tel:0672500506'" 
+                class="border-2 border-white hover:bg-white hover:text-emerald-700 px-8 md:px-10 py-5 rounded-2xl text-lg font-semibold transition">
+          Call Us Now
+        </button>
+      </div>
+
+      <!-- Service Icons -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+        <div class="bg-white/95 text-emerald-800 p-5 rounded-3xl text-center shadow">
+          <i class="fas fa-stethoscope text-4xl mb-3"></i>
+          <p class="font-semibold text-sm">General Consultation</p>
+        </div>
+        <div class="bg-white/95 text-emerald-800 p-5 rounded-3xl text-center shadow">
+          <i class="fas fa-droplet text-4xl mb-3"></i>
+          <p class="font-semibold text-sm">IV Vitamin Therapy</p>
+        </div>
+        <div class="bg-white/95 text-emerald-800 p-5 rounded-3xl text-center shadow">
+          <i class="fas fa-heartbeat text-4xl mb-3"></i>
+          <p class="font-semibold text-sm">Health Screening</p>
+        </div>
+        <div class="bg-white/95 text-emerald-800 p-5 rounded-3xl text-center shadow">
+          <i class="fas fa-baby text-4xl mb-3"></i>
+          <p class="font-semibold text-sm">Family Planning</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors -->
+  <section id="doctors" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-5">
+      <h2 class="text-4xl font-bold text-center text-emerald-800 mb-12">Our Doctors</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 text-center">
+          <h3 class="text-2xl font-semibold text-emerald-800">Dr. Setaise K</h3>
+          <p class="text-emerald-600 mt-2">MBChB (SMU), DCH (CMSA)</p>
+        </div>
+        <div class="bg-white rounded-3xl shadow-lg p-8 text-center">
+          <h3 class="text-2xl font-semibold text-emerald-800">Dr. Kgwed i T.S</h3>
+          <p class="text-emerald-600 mt-2">MBChB (SMU)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-5">
+      <h2 class="text-4xl font-bold text-center text-emerald-800 mb-4">Our Services</h2>
+      <p class="text-center text-gray-600 mb-12">Professional & Compassionate Healthcare</p>
+
+      <div class="grid md:grid-cols-2 gap-x-16 gap-y-10">
+        <div>
+          <h3 class="font-semibold text-xl mb-6 text-emerald-700 border-b pb-3">General Services</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>General Consultation</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>Treatment of Acute & Chronic Conditions</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>Child Immunization</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>Family Planning</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>Pap Smear</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>Basic Antenatal Care & Pregnancy Test</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>IV Vitamin Therapy (Glow Drips)</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>STI Screening & Treatment</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-xl mb-6 text-emerald-700 border-b pb-3">Specialized Services</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>HIV Testing & Counselling</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>HIV Prevention (PEP & PrEP)</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>Safe Termination of Pregnancy</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>Mental Health Support</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>Minor Surgical Procedures & Wound Care</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>Circumcision</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>Medical Tests & Referrals</li>
+            <li><i class="fas fa-check text-emerald-600 mr-3"></i>Prescription & PDP</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 bg-emerald-50 p-10 rounded-3xl text-center">
+        <p class="text-2xl font-semibold">Adult Consultation: <span class="text-emerald-600">R500.00</span></p>
+        <p class="text-2xl font-semibold mt-4">Children & Pensioners: <span class="text-emerald-600">R400.00</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Operating Hours -->
+  <section id="hours" class="py-20 bg-emerald-700 text-white">
+    <div class="max-w-7xl mx-auto px-5">
+      <h2 class="text-4xl font-bold text-center mb-12">Operating Hours</h2>
+      <div class="max-w-md mx-auto text-center text-lg space-y-4">
+        <p><strong>Mon - Fri:</strong> 08:00 - 18:00</p>
+        <p><strong>Saturday:</strong> 08:00 - 14:00</p>
+        <p><strong>Sunday:</strong> Closed</p>
+        <p><strong>Public Holidays:</strong> 09:00 - 14:00</p>
+      </div>
+      <p class="text-center mt-10 text-xl font-semibold">Medical Aid & Cash Accepted</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-5 text-center">
+      <h2 class="text-4xl font-bold mb-10">Get In Touch</h2>
+      <div class="grid md:grid-cols-3 gap-10 max-w-4xl mx-auto">
+        <div>
+          <i class="fas fa-phone text-5xl mb-4 text-emerald-400"></i>
+          <p class="font-semibold text-lg">Call Us</p>
+          <p>067 250 0506</p>
+          <p>063 588 1637</p>
+        </div>
+        <div>
+          <i class="fab fa-whatsapp text-5xl mb-4 text-emerald-400"></i>
+          <p class="font-semibold text-lg">WhatsApp</p>
+          <p>064 985 1938</p>
+          <p>079 681 1872</p>
+        </div>
+        <div>
+          <i class="fas fa-map-marker-alt text-5xl mb-4 text-emerald-400"></i>
+          <p class="font-semibold text-lg">Visit Us</p>
+          <p>9056 Extension 7, 1st Street</p>
+          <p>Attridgeville, 0008</p>
+        </div>
+      </div>
+
+      <a href="https://wa.me/27649851938" target="_blank"
+         class="mt-12 inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-full text-xl font-semibold transition">
+        <i class="fab fa-whatsapp text-3xl"></i> Chat with Us on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-black text-gray-400 py-8 text-center text-sm">
+    <p>&copy; 2026 MoonMed Health & Wellness • Attridgeville</p>
+  </footer>
+
+  <script>
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = hamburger.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    // Close mobile menu when link is clicked
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        const icon = hamburger.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
+      });
+    });
+  </script>
+</body>
+</html>
