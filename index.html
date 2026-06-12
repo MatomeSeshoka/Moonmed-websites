@@ -9,7 +9,7 @@
   <style>
     :root {
       --sage: #6B7F6E;
-      --sage-light: #8FA38F;
+      --sage-green: #487b61;
       --ivory: #F8F4ED;
     }
 
@@ -39,7 +39,7 @@
       transition: all 0.3s;
     }
     .sage-btn:hover {
-      background-color: var(--sage-light);
+      background-color: var(--sage-green);
       transform: translateY(-2px);
     }
   </style>
@@ -50,17 +50,13 @@
   <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
-        
-        <!-- Logo Only -->
         <div>
-          <img src="assets/logo.jpg" 
-               alt="MoonMed Logo" 
-               class="logo-img">
+          <img src="assets/logo.jpg" alt="MoonMed Logo" class="logo-img">
         </div>
 
-        <!-- Desktop Menu -->
         <div class="hidden md:flex gap-8 text-gray-700 font-medium">
           <a href="#" class="hover:text-[var(--sage)] transition">Home</a>
+          <a href="#about" class="hover:text-[var(--sage)] transition">About Us</a>
           <a href="#services" class="hover:text-[var(--sage)] transition">Services</a>
           <a href="#doctors" class="hover:text-[var(--sage)] transition">Our Doctors</a>
           <a href="#hours" class="hover:text-[var(--sage)] transition">Hours</a>
@@ -68,7 +64,7 @@
         </div>
 
         <div class="hidden md:flex items-center gap-4">
-          <a href="tel:0672500506" class="text-[var(--sage)] font-semibold hover:text-[var(--sage-light)] flex items-center gap-2">
+          <a href="tel:0672500506" class="text-[var(--sage)] font-semibold hover:text-[var(--sage-green)] flex items-center gap-2">
             <i class="fas fa-phone"></i> 067 250 0506
           </a>
           <button onclick="openAppointmentModal()" 
@@ -77,7 +73,6 @@
           </button>
         </div>
 
-        <!-- Mobile Hamburger -->
         <button id="hamburger" class="md:hidden text-3xl text-[var(--sage)] p-2">
           <i class="fas fa-bars"></i>
         </button>
@@ -87,6 +82,7 @@
       <div id="mobileMenu" class="hidden md:hidden mt-4 py-4 border-t">
         <div class="flex flex-col gap-4 text-gray-700 font-medium">
           <a href="#" class="hover:text-[var(--sage)] transition py-3">Home</a>
+          <a href="#about" class="hover:text-[var(--sage)] transition py-3">About Us</a>
           <a href="#services" class="hover:text-[var(--sage)] transition py-3">Services</a>
           <a href="#doctors" class="hover:text-[var(--sage)] transition py-3">Our Doctors</a>
           <a href="#hours" class="hover:text-[var(--sage)] transition py-3">Hours</a>
@@ -122,36 +118,44 @@
     </div>
   </section>
 
-  <!-- Doctors -->
-  <section id="doctors" class="py-20 bg-[var(--ivory)]">
+  <!-- About Us -->
+  <section id="about" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-5">
-      <h2 class="text-4xl font-bold text-center text-[var(--sage)] mb-12">Our Doctors</h2>
-      <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
-          <img src="assets/DrSetaise.jpg" 
-               alt="Dr. Setaise K" 
-               class="w-full h-80 object-cover">
-          <div class="p-8 text-center">
-            <h3 class="text-2xl font-semibold text-[var(--sage)]">Dr. Setaise K</h3>
-            <p class="text-[var(--sage-light)] mt-1">MBChB (SMU), DCH (CMSA)</p>
-          </div>
-        </div>
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-[var(--sage)] mb-6">About MoonMed Health & Wellness</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          MoonMed Health & Wellness is a modern, patient-centered medical practice dedicated to providing 
+          high-quality healthcare services to the Attridgeville community and surrounding areas.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mt-6">
+          Led by experienced doctors <strong>Dr. Setaise K</strong> and <strong>Dr. Kgwedi T.S</strong>, we offer a wide range 
+          of general and specialized medical services in a warm, welcoming environment. 
+          Our focus is on compassionate care, preventive medicine, and building long-term relationships with our patients.
+        </p>
+      </div>
 
-        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
-          <img src="assets/DrKgwedi.jpg" 
-               alt="Dr. Kgwed i T.S" 
-               class="w-full h-80 object-cover">
-          <div class="p-8 text-center">
-            <h3 class="text-2xl font-semibold text-[var(--sage)]">Dr. Kgwed i T.S</h3>
-            <p class="text-[var(--sage-light)] mt-1">MBChB (SMU)</p>
-          </div>
+      <div class="mt-12 grid md:grid-cols-3 gap-8 text-center">
+        <div class="bg-[var(--ivory)] p-8 rounded-3xl">
+          <i class="fas fa-heart text-4xl text-[var(--sage)] mb-4"></i>
+          <h4 class="font-semibold text-[var(--sage)]">Compassionate Care</h4>
+          <p class="text-sm text-gray-600 mt-2">Treating every patient with dignity and respect</p>
+        </div>
+        <div class="bg-[var(--ivory)] p-8 rounded-3xl">
+          <i class="fas fa-clock text-4xl text-[var(--sage)] mb-4"></i>
+          <h4 class="font-semibold text-[var(--sage)]">Convenient Access</h4>
+          <p class="text-sm text-gray-600 mt-2">Flexible hours and easy location in Attridgeville</p>
+        </div>
+        <div class="bg-[var(--ivory)] p-8 rounded-3xl">
+          <i class="fas fa-medal text-4xl text-[var(--sage)] mb-4"></i>
+          <h4 class="font-semibold text-[var(--sage)]">Professional Excellence</h4>
+          <p class="text-sm text-gray-600 mt-2">Qualified doctors with years of experience</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-20 bg-white">
+  <section id="services" class="py-20 bg-[var(--ivory)]">
     <div class="max-w-7xl mx-auto px-5">
       <h2 class="text-4xl font-bold text-center text-[var(--sage)] mb-4">Our Services</h2>
       <p class="text-center text-gray-600 mb-12">Professional & Compassionate Healthcare</p>
@@ -186,9 +190,32 @@
         </div>
       </div>
 
-      <div class="mt-14 bg-[var(--ivory)] p-10 rounded-3xl text-center">
-        <p class="text-2xl font-semibold text-[var(--sage)]">Adult Consultation: <span class="text-[var(--sage-light)]">R500.00</span></p>
-        <p class="text-2xl font-semibold text-[var(--sage)] mt-4">Children & Pensioners: <span class="text-[var(--sage-light)]">R400.00</span></p>
+      <div class="mt-14 bg-white p-10 rounded-3xl text-center shadow">
+        <p class="text-2xl font-semibold text-[var(--sage)]">Adult Consultation: <span class="text-[var(--sage-green)]">R500.00</span></p>
+        <p class="text-2xl font-semibold text-[var(--sage)] mt-4">Children & Pensioners: <span class="text-[var(--sage-green)]">R400.00</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors -->
+  <section id="doctors" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-5">
+      <h2 class="text-4xl font-bold text-center text-[var(--sage)] mb-12">Our Doctors</h2>
+      <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+          <img src="assets/DrSetaise.jpg" alt="Dr. Setaise K" class="w-full h-80 object-cover">
+          <div class="p-8 text-center">
+            <h3 class="text-2xl font-semibold text-[var(--sage)]">Dr. Setaise K</h3>
+            <p class="text-[var(--sage-green)] mt-1">MBChB (SMU), DCH (CMSA)</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+          <img src="assets/DrKgwedi.jpg" alt="Dr. Kgwed i T.S" class="w-full h-80 object-cover">
+          <div class="p-8 text-center">
+            <h3 class="text-2xl font-semibold text-[var(--sage)]">Dr. Kgwed i T.S</h3>
+            <p class="text-[var(--sage-green)] mt-1">MBChB (SMU)</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -208,7 +235,7 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-[var(--sage-light)] text-white">
+  <section id="contact" class="py-20 bg-[var(--sage-green)] text-white">
     <div class="max-w-7xl mx-auto px-5 text-center">
       <h2 class="text-4xl font-bold mb-10">Get In Touch</h2>
       <div class="grid md:grid-cols-3 gap-10 max-w-4xl mx-auto">
@@ -239,6 +266,7 @@
     </div>
   </section>
 
+  <!-- Appointment Modal & Footer + Script (unchanged) -->
   <!-- Appointment Modal -->
   <div id="appointmentModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100] p-4">
     <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-auto">
@@ -368,7 +396,6 @@
       closeAppointmentModal();
     }
 
-    // WhatsApp Forwarding
     function handleSubmit(e) {
       e.preventDefault();
 
@@ -389,16 +416,14 @@
                               `*Service:* ${service}%0A%0A` +
                               `*Message:* ${message}`;
 
-      const whatsappNumber = "27649851938"; // Main WhatsApp number
+      const whatsappNumber = "27649851938";
 
       window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
 
-      // Reset form
       document.getElementById('appointmentForm').reset();
       closeAppointmentModal();
     }
 
-    // Close modal when clicking outside
     document.getElementById('appointmentModal').addEventListener('click', function(e) {
       if (e.target === this) closeAppointmentModal();
     });
